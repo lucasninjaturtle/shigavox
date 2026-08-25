@@ -6,7 +6,6 @@ from ebooklib import epub
 from shigavox.models.chapter import Chapter
 from shigavox.processing.text_cleaner import TextCleaner
 
-
 IGNORED_DOCUMENTS = {
     "colophon",
     "cover",
@@ -70,9 +69,7 @@ class EpubParser:
 
     @staticmethod
     def _extract_text(soup: BeautifulSoup) -> str:
-        blocks = soup.find_all(
-            ["h1", "h2", "h3", "p", "blockquote"]
-        )
+        blocks = soup.find_all(["h1", "h2", "h3", "p", "blockquote"])
 
         paragraphs: list[str] = []
 

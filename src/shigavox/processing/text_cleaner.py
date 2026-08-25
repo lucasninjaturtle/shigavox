@@ -6,11 +6,7 @@ class TextCleaner:
     def clean(text: str) -> str:
         text = text.replace("\xa0", " ")
 
-        lines = [
-            line.strip()
-            for line in text.splitlines()
-            if line.strip()
-        ]
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
 
         text = "\n\n".join(lines)
 

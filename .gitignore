@@ -29,7 +29,8 @@ htmlcov/
 
 # Shigavox local input/output
 input-books/*
-!input-books/.gitkeep
+!input-books/README.md
+!input-books/alice.epub
 
 output/*
 !output/.gitkeep
